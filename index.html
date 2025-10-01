@@ -10,18 +10,16 @@
 <body>
     <main class="banking-main">
         <section class="banking-menu">
-            <section class="create-account">
-                <button class="create-account-btn">Create Account</button>
-                <label for="create-account-id" class="hidden">Enter your Name:</label>
-                <input type="text" class="create-account-input hidden">
-            </section>
-
             <section class="deposit">
                     <button class="deposit-btn">Deposit</button>
+                    <label for="deposit" class="hidden label-deposit">Enter amount to deposit: </label>
+                    <input type="text" class="hidden deposit-input" id="deposit">
             </section>
 
             <section class="withdraw">
                     <button class="withdraw-btn">Withdraw</button>
+                    <label for="withdraw" class="hidden label-withdraw">Enter amount to withdraw: </label>
+                    <input type="text" class="hidden withdraw-input" id="withdraw">
             </section>
 
             <section class="check-balance">
