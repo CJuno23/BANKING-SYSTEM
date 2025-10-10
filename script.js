@@ -11,8 +11,8 @@ let depositLabel = document.querySelector(".label-deposit");
 let withdraw = document.querySelector(".withdraw")
 let withdrawInput = document.querySelector(".withdraw-input");
 let withdrawLabel = document.querySelector(".label-withdraw");
-let checkBalanceDiv = document.createElement("div");
-let checkBalance = document.querySelector(".check-balance")
+let mainBalance = document.querySelector(".main-balance")
+let showBalance = document.querySelector(".show-balance")
 let balance = 0;
 let password = "";
 let correctPassword = "12345";
@@ -35,6 +35,8 @@ confirmDepositBtn.addEventListener("click", () => {
         }
     depositInput.focus();
     depositInput.value = "";
+    showBalance.textContent = balance;
+    mainBalance.append(showBalance);
 });
 withdrawBtn.addEventListener("click", () => {
     withdrawLabel.style.display = "block";
@@ -57,9 +59,10 @@ confirmWithdrawBtn.addEventListener("click", () => {
     }
     withdrawInput.value = "";
     withdrawInput.focus();
-
+    showBalance.textContent = balance.toLocaleString("en-PH", {
+        style: "currency",
+        currency: "PHP"
+    });
+    mainBalance.append(showBalance);
 });
-checkBalanceBtn.addEventListener("click", () => {
-    checkBalanceDiv.textContent = (`Your updated balance is ${balance}`);
-    checkBalance.append(checkBalanceDiv)
-})
+

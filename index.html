@@ -5,31 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
     <main class="banking-main">
         <section class="banking-menu">
-            <section class="deposit">
-                    <button class="deposit-btn">Deposit</button>
-                    <label for="deposit" class="hidden label-deposit">Enter amount to deposit: </label>
-                    <input type="text" class="hidden deposit-input" id="deposit">
-                    <button class="confirm-deposit-btn hidden">Confirm Deposit</button>
+            <section class="sidebar">
+                <section class="deposit">
+                        <button class="deposit-btn">
+                            <img src="img/credit-card.png" height="50px" width="50px">
+                            Deposit
+                        </button>
+                        <label for="deposit" class="hidden label-deposit">Enter amount to deposit: </label>
+                        <input type="text" class="hidden deposit-input" id="deposit">
+                        <button class="confirm-deposit-btn hidden">Confirm Deposit</button>
+                </section>
+                <section class="withdraw">
+                        <button class="withdraw-btn">
+                            <img src="img/dollar.png" height="50px" width="50px"> 
+                            Withdraw
+                        </button>
+                        <label for="withdraw" class="hidden label-withdraw">Enter amount to withdraw: </label>
+                        <input type="text" class="hidden withdraw-input" id="withdraw">
+                        <button class="confirm-withdraw-btn hidden">Confirm Withdraw</button>
+                </section>
             </section>
-
-            <section class="withdraw">
-                    <button class="withdraw-btn">Withdraw</button>
-                    <label for="withdraw" class="hidden label-withdraw">Enter amount to withdraw: </label>
-                    <input type="text" class="hidden withdraw-input" id="withdraw">
-                    <button class="confirm-withdraw-btn hidden">Confirm Withdraw</button>
-            </section>
-
-            <section class="check-balance">
-                <button class="check-balance-btn">Check Balance</button>
-            </section>
-
-            <section class="exit">
-                <button class="exit-btn">Exit</button>
+            <section class="main-content">
+                <section class="main-balance">
+                    <p>Current Balance</p>
+                    <img src="img/user.png" height="50px" width="50px"><br>
+                    <p class="show-balance"></p>
+                </section>
+                <section class="recent-transaction">
+                    <p>Recent Transactions</p>
+                </section>
             </section>
        </section>
     </main>
